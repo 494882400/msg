@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.msg_service.msg.mapper.HongzhaMapper">
+  <resultMap id="BaseResultMap" type="com.msg_service.msg.model.Hongzha">
+    <!--@mbg.generated-->
+    <!--@Table db2.hongzha-->
+    <id column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="touser" jdbcType="VARCHAR" property="touser" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    `uid`, touser, username
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from db2.hongzha
+    where `uid` = #{uid,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll"  resultType="com.msg_service.msg.model.Hongzha">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from db2.hongzha
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from db2.hongzha
+    where `uid` = #{uid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="uid" keyProperty="uid" parameterType="com.msg_service.msg.model.Hongzha" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into db2.hongzha (touser, username)
+    values (#{touser,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="uid" keyProperty="uid" parameterType="com.msg_service.msg.model.Hongzha" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into db2.hongzha
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="touser != null">
+        touser,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="touser != null">
+        #{touser,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.msg_service.msg.model.Hongzha">
+    <!--@mbg.generated-->
+    update db2.hongzha
+    <set>
+      <if test="touser != null">
+        touser = #{touser,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where `uid` = #{uid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.msg_service.msg.model.Hongzha">
+    <!--@mbg.generated-->
+    update db2.hongzha
+    set touser = #{touser,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR}
+    where `uid` = #{uid,jdbcType=INTEGER}
+  </update>
+</mapper>
