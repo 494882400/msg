@@ -71,7 +71,7 @@ public class ExcelServiceImpl implements ExcelService {
     }
 
     @PostConstruct
-    public ThreadPoolExecutor threadsRun(HttpServletResponse response){
+    public ThreadPoolExecutor threadsRun(){
         threadPoolExecutor = new ThreadPoolExecutor(10, 10, 30, TimeUnit.SECONDS, new PriorityBlockingQueue<>(), new ThreadPoolExecutorFactoryBean(), new ThreadPoolExecutor.DiscardOldestPolicy());
         return threadPoolExecutor;
     }

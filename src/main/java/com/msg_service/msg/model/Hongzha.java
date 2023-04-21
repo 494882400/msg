@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  *
  * 
@@ -14,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Hongzha {
+public class Hongzha implements Serializable {
     @ExcelImport("用户ID")
     @ExcelExport(value = "用户ID")
     private Integer uid;
