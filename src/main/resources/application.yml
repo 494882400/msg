@@ -1,0 +1,34 @@
+server:
+    port: 7090
+    tomcat:
+      accesslog:
+          directory: /logs/${spring.application.name}
+spring:
+    application:
+        name: msg-service
+    datasource:
+      druid:
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://121.5.231.18:8001/db1?useUnicode=true&useSSL=false&characterEncoding=UTF-8
+          username: root
+          password: 123456
+    redis:
+        host: 121.5.231.18
+        port: 8002
+rocketmq:
+    name-server: 121.5.231.18:9876
+    producer:
+        group: testPro
+        send-message-timeout: 3000
+        retry-times-when-send-async-failed: 2
+        max-message-size: 4194304
+mybatis:
+    type-aliases-package: com.msg_service.msg.model
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapper-locations: classpath:mapperxml/*Mapper.xml
+wx:
+    appid: wx2343f2de052e8191
+    tokenurl: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s
+    appsecret: f791cf1e68db99e27977b653d01d72b3
+    msgurl: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s

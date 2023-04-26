@@ -1,5 +1,6 @@
 package com.msg_service.msg;
 
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

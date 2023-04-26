@@ -10,7 +10,7 @@ import com.msg_service.msg.utils.Test.ProxyFactory;
 /**
  *
  */
-public class tEST {
+public class TestA {
 
 
     public static void main(String[] args) {

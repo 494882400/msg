@@ -3,7 +3,7 @@
 <mapper namespace="com.msg_service.msg.mapper.HongzhaMapper">
   <resultMap id="BaseResultMap" type="com.msg_service.msg.model.Hongzha">
     <!--@mbg.generated-->
-    <!--@Table db2.hongzha-->
+    <!--@Table db1.hongzha-->
     <id column="uid" jdbcType="INTEGER" property="uid" />
     <result column="touser" jdbcType="VARCHAR" property="touser" />
     <result column="username" jdbcType="VARCHAR" property="username" />
@@ -16,28 +16,28 @@
     <!--@mbg.generated-->
     select 
     <include refid="Base_Column_List" />
-    from db2.hongzha
+    from db1.hongzha
     where `uid` = #{uid,jdbcType=INTEGER}
   </select>
   <select id="selectAll"  resultType="com.msg_service.msg.model.Hongzha">
     <!--@mbg.generated-->
     select
     <include refid="Base_Column_List" />
-    from db2.hongzha
+    from db1.hongzha
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--@mbg.generated-->
-    delete from db2.hongzha
+    delete from db1.hongzha
     where `uid` = #{uid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" keyColumn="uid" keyProperty="uid" parameterType="com.msg_service.msg.model.Hongzha" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into db2.hongzha (touser, username)
+    insert into db1.hongzha (touser, username)
     values (#{touser,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="uid" keyProperty="uid" parameterType="com.msg_service.msg.model.Hongzha" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into db2.hongzha
+    insert into db1.hongzha
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="touser != null">
         touser,
@@ -57,7 +57,7 @@
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.msg_service.msg.model.Hongzha">
     <!--@mbg.generated-->
-    update db2.hongzha
+    update db1.hongzha
     <set>
       <if test="touser != null">
         touser = #{touser,jdbcType=VARCHAR},
@@ -70,7 +70,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.msg_service.msg.model.Hongzha">
     <!--@mbg.generated-->
-    update db2.hongzha
+    update db1.hongzha
     set touser = #{touser,jdbcType=VARCHAR},
       username = #{username,jdbcType=VARCHAR}
     where `uid` = #{uid,jdbcType=INTEGER}
