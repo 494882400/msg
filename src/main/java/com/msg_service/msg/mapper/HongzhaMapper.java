@@ -1,6 +1,7 @@
 package com.msg_service.msg.mapper;
 
 import com.msg_service.msg.model.Hongzha;
+import com.msg_service.msg.model.ann.DataSource;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

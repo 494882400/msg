@@ -1,11 +1,13 @@
 package com.msg_service.msg.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.msg_service.msg.config.WxOfficialProperties;
 import com.msg_service.msg.mapper.HongzhaMapper;
 import com.msg_service.msg.model.Hongzha;
 import com.msg_service.msg.model.Result;
 import com.msg_service.msg.model.WxMsgBody;
+import com.msg_service.msg.model.ann.DataSource;
 import com.msg_service.msg.service.MsgService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,6 +86,15 @@ public class MsgServiceImpl implements MsgService {
         }else {
             return result1;
         }
+    }
+
+    @Override
+    @DataSource("slave")
+    public Result data() {
+        Result result = new Result();
+        hongzhas = hongzhaMapper.selectAll();
+        result.setMsgInfo(JSON.toJSONString(hongzhas));
+        return result;
     }
 
 

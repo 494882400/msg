@@ -37,4 +37,10 @@ public class MsgController {
         return result;
     }
 
+    @GetMapping("/data")
+    public Result data(){
+        Result result = msgService.data();
+        return result;
+    }
+
 }

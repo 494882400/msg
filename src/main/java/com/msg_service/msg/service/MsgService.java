@@ -12,4 +12,6 @@ public interface MsgService {
     Result sendWxMsg();
 
 
+    Result data();
+
 }

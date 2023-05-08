@@ -1,5 +1,7 @@
 package com.msg_service.msg.controller.json;
 
+import cn.hutool.json.JSONObject;
+import com.alibaba.fastjson.JSON;
 import com.msg_service.msg.controller.json.A;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +18,7 @@ public class TestController {
     public A test(){
         A a = new A();
         a.setFlag("true");
-        a.setResult("");
+        a.setResult(JSON.toJSONString(a));
         return a;
     }
 
