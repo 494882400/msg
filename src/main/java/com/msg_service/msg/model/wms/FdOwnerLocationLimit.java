@@ -6,10 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 货主货位限定
     */
 @Data

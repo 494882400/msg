@@ -6,10 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 商品拒收通知汇总单
     */
 @Data

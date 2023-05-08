@@ -6,10 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 说明书修订表
     */
 @Data

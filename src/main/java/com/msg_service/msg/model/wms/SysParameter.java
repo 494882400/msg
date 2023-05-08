@@ -6,10 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 货主参数维护表
     */
 @Data

@@ -6,10 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 消息配置表
     */
 @Data

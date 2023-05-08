@@ -6,11 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-
-/**
  * 容器资料表
  */
 @Data

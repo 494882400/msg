@@ -7,10 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 商品复检通知明细单
     */
 @Data

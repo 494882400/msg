@@ -5,11 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-
-/**
  * 区域表
  */
 @Data

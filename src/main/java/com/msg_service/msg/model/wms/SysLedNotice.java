@@ -5,10 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * LED公告维护表
     */
 @Data

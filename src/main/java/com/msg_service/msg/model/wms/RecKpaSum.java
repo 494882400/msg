@@ -7,10 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 人员绩效统计表
     */
 @Data

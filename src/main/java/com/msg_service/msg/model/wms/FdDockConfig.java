@@ -4,11 +4,6 @@ import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-/**
- *
- * 
-*/
 /**
     * 卸货档口车辆类型配置表
     */

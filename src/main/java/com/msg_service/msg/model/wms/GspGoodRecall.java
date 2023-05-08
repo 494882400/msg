@@ -5,10 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- * 
-*/
-/**
     * 商品召回表
     */
 @Data
